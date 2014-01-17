@@ -30,6 +30,12 @@ sub song {
     };
 }
 
+# 投票するメソッド
+# arguments:
+#   $song : 曲名
+#   $serial : シリアルナンバー
+# returns:
+#   何もかえらない
 sub vote {
     my ($class, $song, $serial) = @_;
     return if $voters->{$serial};
