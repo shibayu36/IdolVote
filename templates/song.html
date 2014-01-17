@@ -1,9 +1,0 @@
-[% WRAPPER '_wrapper.tt' %]
-[% song.name %]
-投票数 : [% song.vote %]
-
-<form action="/song/[% song.name %]" method="POST">
-  <input type="text" name="serial" />
-  <input type="submit" value="投票" />
-</form>
-[% END # WRAPPER %]
