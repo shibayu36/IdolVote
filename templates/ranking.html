@@ -1,0 +1,10 @@
+[% WRAPPER '_wrapper.tt' %]
+<ul>
+  [%- FOR song IN ranking -%]
+  <li>
+    [% song.name %] : [% song.vote %]
+  </li>
+  [%- END -%]
+</ul>
+
+[% END # WRAPPER %]

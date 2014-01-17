@@ -25,6 +25,11 @@ sub make_router {
             engine => 'Songs',
             action => 'vote_song',
         } => { method => 'POST' };
+
+        connect '/ranking' =>  {
+            engine => 'Ranking',
+            action => 'default',
+        };
     };
 }
 
