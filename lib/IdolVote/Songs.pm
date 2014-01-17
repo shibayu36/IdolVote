@@ -44,4 +44,4 @@ sub vote {
     $votes->{$song}++;
 }
 
-1;
+!!1;
