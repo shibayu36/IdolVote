@@ -12,13 +12,18 @@ sub make_router {
             engine => 'Index',
             action => 'default',
         };
-        connect '/user/list' => {
-            engine => 'User',
-            action => 'list',
+        connect '/songs' => {
+            engine => 'Songs',
+            aciton => 'default',
         };
-        connect '/user/register' => {
-            engine => 'User',
-            action => 'register',
+        connect '/song/:name' => {
+            engine => 'Songs',
+            action => 'song',
+        } => { method => 'GET' };
+
+        connect '/song/:name' => {
+            engine => 'Songs',
+            action => 'vote_song',
         } => { method => 'POST' };
     };
 }

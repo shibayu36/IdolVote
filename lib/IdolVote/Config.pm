@@ -10,7 +10,7 @@ use Config::ENV 'IDOLVOTE_ENV', export => 'config';
 use Path::Class qw(file);
 
 my $Router = IdolVote::Config::Route->make_router;
-my $Root = file(__FILE__)->dir->parent->parent->parent->absolute;
+my $Root = file(__FILE__)->dir->parent->parent->absolute;
 
 sub router { $Router }
 sub root { $Root }
