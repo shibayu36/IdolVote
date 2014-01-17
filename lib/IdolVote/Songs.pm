@@ -36,10 +36,6 @@ sub vote {
 
     $voters->{$serial}++;
     $votes->{$song}++;
-    use Data::Dumper;
-    warn Dumper($song);
-    warn Dumper($voters);
-    warn Dumper($votes);
 }
 
 1;
